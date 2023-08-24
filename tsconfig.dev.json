@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "sourceMap": true,
+      "target": "ESNext"
+      // Add other development-specific settings here
+    },
+    "include": ["src/**/*.ts", "src/*.tsx"],
+    "exclude": ["node_modules"]
+  }
