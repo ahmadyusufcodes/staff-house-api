@@ -9,4 +9,5 @@ export interface StaffType {
     address: string;
     password: string;
     staffId: string;
+    department: string;
 }

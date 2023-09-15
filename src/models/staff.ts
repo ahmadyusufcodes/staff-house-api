@@ -12,6 +12,9 @@ const StaffSchema = new Schema({
         type: String,
         required: true,
     },
+    department: {
+        type: String,
+    },
     image: {
         type: String,
     },

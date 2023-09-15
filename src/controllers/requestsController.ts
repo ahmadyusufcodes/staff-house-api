@@ -22,9 +22,10 @@ const getRequests = async (req: Request, res: Response) => {
   
       const fine_grain_requests = requests.map((request) => {
           const {bedrooms, bathrooms, levels, address} = request.house;
-          const {name, email, phone} = request.staff;
+          const {name, email, phone, department} = request.staff;
         return {
           staff_email: email,
+          staff_dept: department,
           house_desc: `${bedrooms}bdrm, ${bathrooms}bath, ${levels}lvl at ${address}`,
           staff_phone: phone,
           staff_name: name,

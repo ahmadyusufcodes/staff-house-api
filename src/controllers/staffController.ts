@@ -51,6 +51,7 @@ const createStaff = async (req: Request, res: Response) => {
       phone,
       address,
       password,
+      department,
       staffId,
     }: StaffType = req.body;
     const staff = await staff_col.create({
@@ -63,6 +64,7 @@ const createStaff = async (req: Request, res: Response) => {
       phone,
       address,
       password,
+      department,
       staffId,
     });
     // if (image) await upload.uploadImagesAndGetUrls([image], "staff");
@@ -95,6 +97,7 @@ const updateStaff = async (req: Request, res: Response) => {
       phone,
       address,
       password,
+      department,
       staffId,
     }: StaffType = req.body;
     const updated_staff = await staff_col.findOneAndUpdate(
@@ -109,6 +112,7 @@ const updateStaff = async (req: Request, res: Response) => {
         phone,
         address,
         password,
+        department,
         staffId,
       },
       { new: true }
